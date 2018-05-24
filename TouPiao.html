@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+    <title>投票</title>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
+
+    <style>
+        .div3 {
+            float: left;
+        }
+
+        a img {
+            border: none;
+        }
+
+        .testdiv {
+            /*vertical-align: middle;*/
+            display: flex; /*Flex布局*/
+            display: -webkit-flex; /* Safari */
+            align-items: center; /*指定垂直居中*/
+        }
+    </style>
+</head>
+<body>
+    <!--       TouPiao2.png-->
+    <div id="content" style="margin-top: 20px;margin-bottom:60px;">
+
+
+        <div align="center" style="height: 70px;">
+            <img src="images/TouXiang.jpg" style="width: 15%; border-radius: 50%;" />
+            <b><span style="margin-top: -10px; position: absolute; top: 8%; transform: translateY(-50%);">&nbsp;&nbsp;<font color="FFAEB9">莉莉</font></span></b>
+        </div>
+
+        <div style="border-top: dotted 1px #ddd; border-bottom: solid 1px #ddd; background-color: #eee; height: 50px;">
+            <div align="center" class="div3" style="width: 33%; margin-top: 8px;">
+                <img src="images/gift1.png" style="width: 15%" />编号<br />
+                16
+            </div>
+            <div align="center" class="div3" style="width: 33%; margin-top: 8px;">
+                <img src="images/gift2.png" style="width: 15%" />票数<br />
+                7
+            </div>
+            <div align="center" class="div3" style="width: 33%; margin-top: 8px;">
+                <img src="images/gift3.png" style="width: 15%" />热度<br />
+                88
+            </div>
+        </div>
+
+        <div class="testdiv" style="background-color: #fff; height: 50px; margin-top: 10px;" align="left">
+            <img src="images/TouPiao1.png" style="width: 7%;" />
+            <label style="">&nbsp;宣言：轻奢品牌穿无己，我为无己代言！</label>
+        </div>
+
+        <div class="slider8" style="margin-top: 10px;">
+            <div class="slide">
+                <img src="images/Pai1.jpg">
+            </div>
+            <div class="slide">
+                <img src="images/Pai2.jpg">
+            </div>
+            <div class="slide">
+                <img src="images/Pai3.jpg">
+            </div>
+            <div class="slide">
+                <img src="images/Pai4.jpg">
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.slider8').bxSlider({
+                    slideWidth: 600,
+                    adaptiveHeight: true,
+                    startSlides: 0,
+                    slideMargin: 10
+                });
+            });
+        </script>
+
+        <div id="list" style="border-top: dotted 1px #666; margin-top: 20px; background-color: #eee;">
+            <div class="testdiv" style="height: 50px;">
+                <img src="images/TouPiao2.png" style="width: 7%; margin-left: 5px;" />
+                <label style="">&nbsp;礼物列表</label>
+            </div>
+            <hr style="color: #666; margin-top: 8px;" />
+
+
+            <div class="testdiv" style="margin-left: 10px;">
+                <img src="images/TouXiang.jpg" style="width: 17%;" />
+                <p>&nbsp;赵腾，给TA送了1份汽车！<br />
+                    <br />
+                    <font style="color: #666">&nbsp;2018-02-02 09:44:46</font></p>
+            </div>
+
+            <div class="testdiv" style="margin-left: 10px;">
+                <img src="images/TouXiang.jpg" style="width: 17%;" />
+                <p>&nbsp;赵腾，给TA送了1份汽车！<br />
+                    <br />
+                    <font style="color: #666">&nbsp;2018-02-02 09:44:46</font></p>
+            </div>
+
+            <div class="testdiv" style="margin-left: 10px;">
+                <img src="images/TouXiang.jpg" style="width: 17%;" />
+                <p>&nbsp;赵腾，给TA送了1份汽车！<br />
+                    <br />
+                    <font style="color: #666">&nbsp;2018-02-02 09:44:46</font></p>
+            </div>
+
+            <br />
+        </div> 
+    </div>
+
+     <style>
+        .testdiv1 {
+            /*vertical-align: middle;*/
+            display: flex; /*Flex布局*/
+            display: -webkit-flex; /* Safari */
+            align-items: center; /*指定垂直居中*/
+            position: fixed;
+            bottom: 0px;
+            height: 60px;
+            width: 100%;
+            background-color: #fff;
+        }
+
+        a {
+            font-size: 16px;
+            text-align: center;
+            font-family: 微软雅黑;
+            color: #808080;
+        }
+    </style>
+    <div class="testdiv1">
+        <div style="width: 50%" align="center">
+            <img src="images/Hui.png" style="width: 20%" /><br /><a href="TouPiaoList.html" style="text-decoration: none">首页</a>
+        </div>
+        <div style="width: 50%" align="center">
+            <img src="images/Liwu.png" style="width: 20%" /><br /><a href="#" onclick="Tou()" style="text-decoration: none">投票</a>
+        </div>
+    </div>
+
+    <script>
+        function Tou() {
+            alert("投票成功");
+        }
+    </script>
+</body>
+</html>

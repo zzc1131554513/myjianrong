@@ -1,0 +1,387 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0068)http://demo.sc.chinaz.com//Files/DownLoad/webjs1/201508/jiaoben3610/ -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>榜单</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/menu.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/com.css" media="all">
+
+    <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="js/jquery.masonry.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/Pstyle.css" />
+    <script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+
+    <style>
+        input[type=text], textarea {
+            border-radius: 3px;
+            border: 1px solid #FFAEB9;
+        }
+
+        .two {
+            -moz-box-shadow: 1px 1px 5px #FFAEB9;
+            -webkit-box-shadow: 1px 1px 5px #FFAEB9;
+            box-shadow: 1px 1px 5px #FFAEB9;
+        }
+
+        .number {
+            opacity: 0.8;
+            display: block;
+            width: 100px;
+            height: 30px;
+            background: #FFAEB9;
+            position: absolute;
+            color: #fff;
+            text-align: center;
+            line-height: 32px;
+            top: 0;
+            left: 4%;
+            font-size: 14px;
+        }
+
+            .number:after {
+                content: '';
+                width: 0;
+                height: 0;
+                position: absolute;
+                top: 30px;
+                right: 0;
+                border-top: 10px solid #FFAEB9;
+                border-left: 50px solid transparent;
+                border-right: 50px solid transparent;
+            }
+
+        a.vote {
+            position: absolute;
+            margin-top: -45px;
+            margin-left: 100px;
+            line-height: 45px;
+            width: 25%;
+            height: 45px;
+            background: #fff;
+            border-style: solid;
+            border-width: 1px;
+            color: #FFAEB9;
+            font-size: 16px;
+            text-align: center;
+            border-radius: 50%;
+        }
+
+        /**/
+        .news_tit {
+            margin: 0px;
+            height: 35px;
+            font-weight: 700;
+            font-size: 14px;
+            background: #fff;
+        }
+            .news_tit LI {
+                FLOAT: left;
+                WIDTH: 50%;
+                LINE-HEIGHT: 35px;
+                TEXT-ALIGN: center;
+                list-style: none;
+                color: #0356ac;
+            }
+        .news_tit LI.selectd {
+            width: 100%;
+            HEIGHT: 35px;
+            LINE-HEIGHT: 35px;
+            text-align: center;
+            COLOR: #fff;
+            /*background: url(../images/index1_28.jpg) no-repeat;*/
+            background-color:#ffaed0
+        }
+        .news_tit LI.selectd a,
+        .news_tit LI.selectd a:link,
+        .news_tit LI.selectd a:visited {
+            COLOR: #ffffff;
+        }
+
+        ul {
+            list-style-type: none;
+            width: 100%;
+        }
+
+        .Div3{ float:left; }
+
+    		.borderli{
+      		border-bottom:1px solid #FFF;
+      	}
+
+        /*newzzc*/
+        .count{
+            padding:20px 0;
+            overflow: hidden;
+        }
+        .coutit{
+            font-size: 18px;
+            color: #777;
+            font-weight: 700;
+        }
+        .couTime{
+            width: 100%;
+            margin-top:20px;
+            color: #777;
+        }
+        .couTime>div{
+            float:left;
+            text-align: center;
+            width: 18%;
+            font-size: 16px;
+            color: #888;
+            font-weight: 700;
+            border-radius: 3px;
+            border: 1px solid #ffaeb9;
+            background: #fff;
+            height:34px;
+            line-height: 34px;
+            margin-left: 5%;
+            moz-box-shadow: 1px 1px 5px #FFAEB9;
+            -webkit-box-shadow: 1px 1px 5px #FFAEB9;
+            box-shadow: 1px 1px 5px #FFAEB9;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+
+<!--         <div align="center">
+            <div align="center"><font color="#777">活动结束倒计时</font></div>
+            <div align="center" style="width: 80%; margin-top: 10px;">
+                <input type="text" value="41天" class="two" style="width: 22%; height: 34px; text-align: center; font-size: 16px; color: #888; font-weight: 700" />
+                <input type="text" value="20时" class="two" style="width: 22%; height: 34px; text-align: center; font-size: 16px; color: #888; font-weight: 700; margin-left: 5px;" />
+                <input type="text" value="17分" class="two" style="width: 22%; height: 34px; text-align: center; font-size: 16px; color: #888; font-weight: 700; margin-left: 5px;" />
+                <input type="text" value="17分" class="two" style="width: 22%; height: 34px; text-align: center; font-size: 16px; color: #888; font-weight: 700; margin-left: 5px;" />
+            </div>
+        </div> -->
+
+        <div class="count">
+            <div align="center" class="coutit">活动结束倒计时</div>
+            <div class="couTime">
+                <div>1天</div>
+                <div>20时</div>
+                <div>17分</div>
+                <div>08秒</div>
+            </div>
+        </div>
+
+        <div id="pageCon" class="news_tit" style="padding-bottom: 30px; margin-top: 10px;">
+
+            <ul>
+                <li class="selectd" id="top_li0" onclick="ChangeAll('2','0','top_li','top_div','selectd','')">票数榜</li>
+            </ul>
+
+        </div>
+
+        <div class="news_list" id="top_div0">
+           <ul class="borderli">
+               <li>
+                   <div algin="center" class="Div3" style="width:20%;">
+				   <img src="images/top1.png" style="width:50%;margin-top:5px;" />
+				   <img src="images/TouXiang.jpg" style="border-radius: 50%; width:50%;z-index:1"/></div>
+
+                   <div class="Div3" style="width:70%;">
+                       <b>
+					   <font style="line-height:15px;font-weight: bold;font-size: 14px;color:#000000;font-family:微软雅黑;">
+                           <span>阳阳</span>
+                       <span>13号</span>
+					   </font>
+                       </b>
+                       <br />
+					   
+					   <font style="line-height:15px;font-size: 12px;color:#000000;font-family:楷体;">
+                       <span>票数 4829</span>
+                       <span>礼物 600点</span>					  
+                        <br />
+                       <span>我为美丽代言，美丽源于无己</span>
+					    </font>
+						
+                   </div>
+                   <div class="Div3" style="width:10%;line-height:70px"><span style="margin-right:50px;"><font color="red">1</font></span></div>				 
+               </li>
+			   
+			   <li>
+                   <div algin="center" class="Div3" style="width:20%;">
+				   <img src="images/top2.png" style="width:50%;margin-top:5px;" />
+				   <img src="images/TouXiang.jpg" style="border-radius: 50%; width:50%;z-index:1"/></div>
+
+                   <div class="Div3" style="width:70%;">
+                       <b>
+					   <font style="line-height:15px;font-weight: bold;font-size: 14px;color:#000000;font-family:微软雅黑;">
+                           <span>阳阳</span>
+                       <span>13号</span>
+					   </font>
+                       </b>
+                       <br />
+					   
+					   <font style="line-height:15px;font-size: 12px;color:#000000;font-family:楷体;">
+                       <span>票数 4829</span>
+                       <span>礼物 600点</span>					  
+                        <br />
+                       <span>我为美丽代言，美丽源于无己</span>
+					    </font>
+						
+                   </div>
+                   <div class="Div3" style="width:10%;line-height:70px"><span style="margin-right:50px;"><font color="red">2</font></span></div>				 
+               </li>
+			   
+			   <li>
+                   <div algin="center" class="Div3" style="width:20%;">
+				   <img src="images/top3.png" style="width:50%;margin-top:5px;" />
+				   <img src="images/TouXiang.jpg" style="border-radius: 50%; width:50%;z-index:1"/></div>
+
+                   <div class="Div3" style="width:70%;">
+                       <b>
+					   <font style="line-height:15px;font-weight: bold;font-size: 14px;color:#000000;font-family:微软雅黑;">
+                           <span>阳阳</span>
+                       <span>13号</span>
+					   </font>
+                       </b>
+                       <br />
+					   
+					   <font style="line-height:15px;font-size: 12px;color:#000000;font-family:楷体;">
+                       <span>票数 4829</span>
+                       <span>礼物 600点</span>					  
+                        <br />
+                       <span>我为美丽代言，美丽源于无己</span>
+					    </font>
+						
+                   </div>
+                   <div class="Div3" style="width:10%;line-height:70px"><span style="margin-right:50px;"><font color="red">3</font></span></div>
+               </li>
+			   
+			   <li>
+                   <div algin="center" class="Div3" style="width:20%;">
+				   <img src="images/top4.png" style="width:50%;margin-top:5px;" />
+				   <img src="images/TouXiang.jpg" style="border-radius: 50%; width:50%;z-index:1"/></div>
+
+                   <div class="Div3" style="width:70%;">
+                       <b>
+					   <font style="line-height:15px;font-weight: bold;font-size: 14px;color:#000000;font-family:微软雅黑;">
+                           <span>阳阳</span>
+                       <span>13号</span>
+					   </font>
+                       </b>
+                       <br />
+					   
+					   <font style="line-height:15px;font-size: 12px;color:#000000;font-family:楷体;">
+                       <span>票数 4829</span>
+                       <span>礼物 600点</span>					  
+                        <br />
+                       <span>我为美丽代言，美丽源于无己</span>
+					    </font>
+						
+                   </div>
+                   <div class="Div3" style="width:10%;line-height:70px"><span style="margin-right:50px;">4</span></div>
+               </li>
+			   
+			    <li>
+                   <div algin="center" class="Div3" style="width:20%;">
+				   <img src="images/top4.png" style="width:50%;margin-top:5px;" />
+				   <img src="images/TouXiang.jpg" style="border-radius: 50%; width:50%;z-index:1"/></div>
+
+                   <div class="Div3" style="width:70%;">
+                       <b>
+					   <font style="line-height:15px;font-weight: bold;font-size: 14px;color:#000000;font-family:微软雅黑;">
+                           <span>阳阳</span>
+                       <span>13号</span>
+					   </font>
+                       </b>
+                       <br />
+					   
+					   <font style="line-height:15px;font-size: 12px;color:#000000;font-family:楷体;">
+                       <span>票数 4829</span>
+                       <span>礼物 600点</span>					  
+                        <br />
+                       <span>我为美丽代言，美丽源于无己</span>
+					    </font>
+						
+                   </div>
+                   <div class="Div3" style="width:10%;line-height:70px"><span style="margin-right:50px;">5</span></div>
+               </li>
+           </ul>
+        </div>
+
+        <div class="news_list" id="top_div1" style="display: none">           
+           <ul>
+                <li>
+                   <div algin="center" class="Div3" style="width:20%;">
+				   <img src="images/top1.png" style="width:50%;margin-top:5px;" />
+				   <img src="images/TouXiang.jpg" style="border-radius: 50%; width:50%;z-index:1"/></div>
+
+                   <div class="Div3" style="width:70%;">
+                       <b>
+                           <span>阳阳</span>
+                       <span>13号</span>
+                       </b>
+                       <br />
+                       <span>票数 4829</span>
+                       <span>礼物 600点</span>
+                        <br />
+                       <span>我为美丽代言，美丽源于无己</span>
+                   </div>
+                   <div class="Div3" style="width:10%;"><span style="margin-right:50px;"><font color="red">1</font></span></div>
+               </li>
+           </ul>
+        </div>
+
+    </div>
+
+    <style>
+        .testdiv {
+            /*vertical-align: middle;*/
+            display: flex; /*Flex布局*/
+            display: -webkit-flex; /* Safari */
+            align-items: center; /*指定垂直居中*/
+            position: fixed;
+            bottom: 0px;
+            height: 60px;
+            width: 100%;
+            background-color: #fff;
+        }
+    </style>
+    <div class="testdiv">
+        <div style="width: 33%" align="center">
+            <img src="images/bottom11.png" style="width: 20%" />
+            <a href="TouPiaoList.html">首页</a>
+        </div>
+        <div style="width: 33%" align="center">
+            <img src="images/bottom22.png" style="width: 20%" />
+            <a href="jieshao.html">奖品</a>
+        </div>
+        <div style="width: 33%" align="center">
+            <img src="images/bottom3.png" style="width: 20%" />
+            <a href="bang.html">榜单</a>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function ChangeAll(cou, curri, liname, divname, sty1, sty2) {
+            for (var i = 0; i < cou; i++) {
+                var li = document.getElementById(liname + i);
+                var cint = document.getElementById(divname + i);
+                if (i == curri) {
+                    li.className = sty1;
+                    cint.style.display = "block";
+                }
+                else {
+                    li.className = sty2;
+                    cint.style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

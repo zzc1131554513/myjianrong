@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0043)http://www.jq22.com/demo/jQuery-tp20160308/ -->
+<html class="">
+<!--<![endif]-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--苹果手机全屏问题-->
+    <meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+
+    <title>投票</title>
+    <link href="css/boilerplate.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
+    <link href="css/sweet-alert.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+</head>
+<body style="background: rgb(195, 13, 35); z-index: 1;">
+
+    <div id="audio_btn" class="video_exist off play_yinfu" style="display: block;">
+        <div id="yinfu" class="rotate"></div>
+        <audio loop="" src="music/bg_2.mp3" id="media" autoplay="" preload="preload"></audio>
+    </div>
+
+    <div id="title1" class="fluid fadeInLeft animated" style="display: block;">
+        <div id="div1" class="">
+            <img src="images/title_1.png" style="width: 58%;">
+        </div>
+
+    </div>
+
+    <div class="gridContainer clearfix">
+        <div id="div2" class="fluid bounceInLeft animated">
+            <img src="images/log_1.png" style="width: 88%;">
+        </div>
+        <div id="div2_1" class="fluid bounceInRight animated">
+            <img src="images/log_2.png" style="width: 88%;">
+        </div>
+    </div>
+
+
+    <div class="gridContainer clearfix">
+        <div id="div3" class="fluid flipInX animated">
+            <img src="images/title_3.png" style="width: 80%;">
+        </div>
+    </div>
+
+    <div class="gridContainer clearfix" style="z-index: 99;">
+        <div id="div4" class="fluid bounceIn animated" style="z-index: 999;">
+            <a href="TouPiaoList.html" class="go btn" style="z-index: 9999;">投票列表</a>
+        </div>
+    </div>
+
+    <div class="gridContainer clearfix" style="z-index: 99;">
+        <div id="div4" class="fluid bounceIn animated" style="z-index: 999;animation-delay: 4s; -webkit-animation-delay: 4s; -moz-animation-delay: 4s;">
+            <a href="jieshao.html" class="go btn" style="z-index: 9999;">奖品列表</a>
+        </div>
+    </div>
+
+    <div class="gridContainer clearfix" style="z-index: 99;">
+        <div id="div4" class="fluid bounceIn animated" style="z-index: 999;animation-delay: 4.5s; -webkit-animation-delay: 4.5s; -moz-animation-delay: 4.5s;">
+            <a href="lan.html" class="go btn" style="z-index: 9999;">分享方式</a>
+        </div>
+    </div>
+
+    <div class="gridContainer clearfix" style="z-index: 99;">
+        <div id="div4" class="fluid bounceIn animated" style="z-index: 999; animation-delay: 5s; -webkit-animation-delay: 5s; -moz-animation-delay: 5s; margin-top: 2em; z-index: 10;">
+            <a class="go btn" style="z-index: 9999;" onclick="swal(&#39;投票规则&#39;, &#39;一致同意规则是指一项政策或议案，须经全体投票人一致赞同才能通过的一种投票规则，这是最符合公共利益要求的投票规则，但因其实质是一票否决制，故在现实生活中很难实施；多数票规则是指一项政策或议案，须经半数以上投票人赞同才能通过的一种投票规则，有氛围简单多数票规则和比例多数票规则，多数票规则往往导致循环投票并且不能反映个人的偏好程度，容易造成政府失灵。&#39;)">投票规则</a>
+        </div>
+    </div>
+
+
+    <script src="js/respond.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <script src="js/sweet-alert.min.js"></script>
+    <script>
+        $("#audio_btn").click(function () {
+            var music = document.getElementById("media");
+            if (music.paused) {
+                music.play();
+                $("#yinfu").addClass('rotate');
+                $("#audio_btn").addClass('play_yinfu');
+                $("#music_btn").attr("src", "play.gif");
+            } else {
+                music.pause();
+                $("#yinfu").removeClass('rotate');
+                $("#audio_btn").removeClass('play_yinfu');
+                $("#music_btn").attr("src", "pause.gif");
+            }
+        });
+</script>
+
+
+    <div>
+        <div class="sweet-overlay" tabindex="-1"></div>
+        <div class="sweet-alert" tabindex="-1">
+            <div class="icon error"><span class="x-mark"><span class="line left"></span><span class="line right"></span></span></div>
+            <div class="icon warning"><span class="body"></span><span class="dot"></span></div>
+            <div class="icon info"></div>
+            <div class="icon success"><span class="line tip"></span><span class="line long"></span>
+                <div class="placeholder"></div>
+                <div class="fix"></div>
+            </div>
+            <div class="icon custom"></div>
+            <h2>Title</h2>
+            <p>Text</p>
+            <button class="cancel" tabindex="2">Cancel</button>
+            <button class="confirm" tabindex="1">OK</button></div>
+    </div>
+    <div style="position: static; width: 0px; height: 0px; border: none; padding: 0px; margin: 0px;">
+        <div id="trans-tooltip">
+            <div id="tip-left-top" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-left-top.png&quot;);"></div>
+            <div id="tip-top" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-top.png&quot;) repeat-x;"></div>
+            <div id="tip-right-top" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-right-top.png&quot;);"></div>
+            <div id="tip-right" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-right.png&quot;) repeat-y;"></div>
+            <div id="tip-right-bottom" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-right-bottom.png&quot;);"></div>
+            <div id="tip-bottom" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-bottom.png&quot;) repeat-x;"></div>
+            <div id="tip-left-bottom" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-left-bottom.png&quot;);"></div>
+            <div id="tip-left" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-left.png&quot;);"></div>
+            <div id="trans-content"></div>
+        </div>
+        <div id="tip-arrow-bottom" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-arrow-bottom.png&quot;);"></div>
+        <div id="tip-arrow-top" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-arrow-top.png&quot;);"></div>
+    </div>
+</body>
+</html>
